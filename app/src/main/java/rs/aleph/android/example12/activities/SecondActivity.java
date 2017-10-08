@@ -3,6 +3,7 @@ package rs.aleph.android.example12.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Toast;
 
@@ -90,7 +91,7 @@ public class SecondActivity extends Activity {
         startActivity(activity3);
     }
     public void btnOpenCameraClicked(View view){
-        Intent camera = new Intent(Intent.ACTION_CAMERA_BUTTON);
+        Intent camera = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
         startActivity(camera);
     }
 }

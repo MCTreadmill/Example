@@ -9,7 +9,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start ThirdActivity"
+        android:text="@string/start_3activity"
         android:id="@+id/start_activity"
         android:onClick="btnStartThirdActivityClicked"/>
 
@@ -17,9 +17,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="start camera"
-        android:id="@+id/open_browser"
-        android:onClick="btnOpenBrowserClicked"/>
+        android:text="@string/open_camera"
+        android:id="@+id/open_camera"
+        android:onClick="btnOpenCameraClicked"/>
 
 
 </LinearLayout>
