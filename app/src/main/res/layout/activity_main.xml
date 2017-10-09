@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:text="@string/open_browser"
         android:id="@+id/open_browser"
+        android:drawableLeft="@drawable/ic_browser"
         android:onClick="btnOpenBrowserClicked"/>
     
 </LinearLayout>
