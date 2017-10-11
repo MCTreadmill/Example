@@ -19,11 +19,7 @@ public class SecondActivity extends Activity {
         // Each lifecycle method should call the method it overrides
         super.onCreate(savedInstanceState);
         // setContentView method draws UI
-        setContentView(R.layout.activity_second);
-
-        // Shows a toast message (a pop-up message)
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onCreate()", Toast.LENGTH_SHORT);
-        toast.show();
+        setContentView(R.layout.activity_second);;
     }
 
     // onStart method is a lifecycle method called after onCreate (or after onRestart when the
@@ -31,9 +27,6 @@ public class SecondActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onStart()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     // onRestart method is a lifecycle method called after onStop when the current activity is
@@ -41,9 +34,6 @@ public class SecondActivity extends Activity {
     @Override
     protected void onRestart() {
         super.onRestart();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onRestart()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     // onResume method is a lifecycle method called after onRestoreInstanceState, onRestart, or
@@ -51,9 +41,6 @@ public class SecondActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onResume()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     // onPause method is a lifecycle method called when an activity is going into the background,
@@ -61,30 +48,21 @@ public class SecondActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onPause()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     // onStop method is a lifecycle method called when the activity are no longer visible to the user
     @Override
     protected void onStop() {
         super.onStop();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onStop()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
     // onDestroy method is a lifecycle method that perform any final cleanup before an activity is destroyed
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
-        Toast toast = Toast.makeText(getBaseContext(), "SecondActivity.onDestroy()", Toast.LENGTH_SHORT);
-        toast.show();
     }
 
-    public void btnStartThirdActivityClicked(View view) {
+    /*public void btnStartThirdActivityClicked(View view) {
         // This is an explicit intent (class property is specified)
         Intent activity3 = new Intent(SecondActivity.this, ThirdActivity.class);
         // startActivity method starts an activity
@@ -93,5 +71,5 @@ public class SecondActivity extends Activity {
     public void btnOpenCameraClicked(View view){
         Intent camera = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
         startActivity(camera);
-    }
+    }*/
 }

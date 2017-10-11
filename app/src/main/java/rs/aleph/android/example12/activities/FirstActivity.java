@@ -20,10 +20,6 @@ public class FirstActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		// setContentView method draws UI
 		setContentView(R.layout.activity_main);
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onCreate()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// onStart method is a lifecycle method called after onCreate (or after onRestart when the
@@ -32,10 +28,6 @@ public class FirstActivity extends Activity {
 	protected void onStart() {
 
 		super.onStart();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onStart()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// onRestart method is a lifecycle method called after onStop when the current activity is
@@ -44,10 +36,6 @@ public class FirstActivity extends Activity {
     protected void onRestart() {
 
 		super.onRestart();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onRestart()", Toast.LENGTH_SHORT);
-		toast.show();
     }
 
 	// onResume method is a lifecycle method called after onRestoreInstanceState, onRestart, or
@@ -56,10 +44,6 @@ public class FirstActivity extends Activity {
 	protected void onResume() {
 
 		super.onResume();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onResume()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// onPause method is a lifecycle method called when an activity is going into the background,
@@ -68,10 +52,6 @@ public class FirstActivity extends Activity {
 	protected void onPause() {
 
 		super.onPause();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onPause()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// onStop method is a lifecycle method called when the activity are no longer visible to the user
@@ -79,10 +59,6 @@ public class FirstActivity extends Activity {
 	protected void onStop() {
 
 		super.onStop();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onStop()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// onDestroy method is a lifecycle method that perform any final cleanup before an activity is destroyed
@@ -90,14 +66,10 @@ public class FirstActivity extends Activity {
 	protected void onDestroy() {
 
 		super.onDestroy();
-
-		// Shows a toast message (a pop-up message)
-		Toast toast = Toast.makeText(getBaseContext(), "FirstActivity.onDestroy()", Toast.LENGTH_SHORT);
-		toast.show();
 	}
 
 	// Called when btnStart button is clicked
-	public void btnStartActivityClicked(View view) {
+	/*public void btnStartActivityClicked(View view) {
 		// This is an explicit intent (class property is specified)
         Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 		// startActivity method starts an activity
@@ -110,5 +82,5 @@ public class FirstActivity extends Activity {
         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"));
 		// startActivity method starts an activity
 		startActivity(i);
-    }
+    }*/
 }

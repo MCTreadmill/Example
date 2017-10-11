@@ -3,7 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <!-- Declares a button that starts 2nd activity -->
+    <ListView
+        android:id="@+id/listofFoods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Declares a button that starts 2nd activity
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -11,13 +16,13 @@
         android:id="@+id/start_activity"
         android:onClick="btnStartActivityClicked"/>
 
-    <!-- Declares a button that opens a browser -->
+     Declares a button that opens a browser
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_browser"
         android:id="@+id/open_browser"
         android:drawableLeft="@drawable/ic_browser"
-        android:onClick="btnOpenBrowserClicked"/>
+        android:onClick="btnOpenBrowserClicked"/>   -->
     
 </LinearLayout>
