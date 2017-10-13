@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by androiddevelopment on 11.10.17..
  */
@@ -10,26 +13,32 @@ public class Food {
     private String name;
     private String description;
     private Category category;
-    private Ingredients ingredients;
     private float calories;
     private float price;
+    private List<Ingredients> ingredients;
 
     public Food(){
-
+        ingredients = new ArrayList<>();
     }
 
-    public Food(String image, String name, String description, Category category, Ingredients ingredients, float calories, float price) {
+    public Food(int id, String image, String name, String description, Category category, float calories, float price) {
+        this.id = id;
         this.image = image;
         this.name = name;
         this.description = description;
         this.category = category;
-        this.ingredients = ingredients;
         this.calories = calories;
         this.price = price;
+
+        ingredients = new ArrayList<>();
     }
 
     public int getId() {
         return id;
+    }
+
+    public void setId() {
+        this.id = id;
     }
 
     public String getImage() {
@@ -64,14 +73,6 @@ public class Food {
         this.category = category;
     }
 
-    public Ingredients getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(Ingredients ingredients) {
-        this.ingredients = ingredients;
-    }
-
     public float getCalories() {
         return calories;
     }
@@ -90,16 +91,9 @@ public class Food {
 
     @Override
     public String toString() {
-        return "Food{" +
-                "id=" + id +
-                ", image='" + image + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", category='" + category + '\'' +
-                ", ingredients='" + ingredients + '\'' +
-                ", calories='" + calories + '\'' +
-                ", price=" + price +
-                '}';
+        return name;
     }
+
+
 
 }

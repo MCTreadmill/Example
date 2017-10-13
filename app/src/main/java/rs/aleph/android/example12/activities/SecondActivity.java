@@ -19,48 +19,11 @@ public class SecondActivity extends Activity {
         // Each lifecycle method should call the method it overrides
         super.onCreate(savedInstanceState);
         // setContentView method draws UI
-        setContentView(R.layout.activity_second);;
+        setContentView(R.layout.activity_second);
+
+
     }
 
-    // onStart method is a lifecycle method called after onCreate (or after onRestart when the
-    // activity had been stopped, but is now again being displayed to the user)
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    // onRestart method is a lifecycle method called after onStop when the current activity is
-    // being re-displayed to the user
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
-
-    // onResume method is a lifecycle method called after onRestoreInstanceState, onRestart, or
-    // onPause, for your activity to start interacting with the user
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    // onPause method is a lifecycle method called when an activity is going into the background,
-    // but has not (yet) been killed
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    // onStop method is a lifecycle method called when the activity are no longer visible to the user
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    // onDestroy method is a lifecycle method that perform any final cleanup before an activity is destroyed
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 
     /*public void btnStartThirdActivityClicked(View view) {
         // This is an explicit intent (class property is specified)
