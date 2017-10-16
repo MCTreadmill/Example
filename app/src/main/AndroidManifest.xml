@@ -34,8 +34,6 @@
             android:icon="@mipmap/ic_launcher">
         </activity>
 
-        <!-- Declares 3rd activity -->
-
     </application>
 
 </manifest>

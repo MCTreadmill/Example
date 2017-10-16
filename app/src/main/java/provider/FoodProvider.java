@@ -22,7 +22,7 @@ public class FoodProvider {
         List<Food> foods = new ArrayList<>();
         foods.add(new Food(0, "cevapi.jpg", "Cevapi", "Sauseges served with fresh onions and white bread", meat, 650, 10));
         foods.add(new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12));
-        foods.add(new Food(2, "Macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9));
+        foods.add(new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9));
         foods.add(new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8 ));
         foods.add(new Food(4, "vegancurry.jpg", "Vegan Curry", "Asian noodles with mixed Veg and green curry", vegan, 590, 6));
         foods.add(new Food(5, "friedveg.jpg", "Fried Veggies", "Mixed fried Vegetables with Soya Sauce", vegan, 500, 5));
