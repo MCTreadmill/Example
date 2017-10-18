@@ -44,21 +44,4 @@ public class FirstActivity extends Activity {
 			}
 		});
 	}
-
-
-	// Called when btnStart button is clicked
-	/*public void btnStartActivityClicked(View view) {
-		// This is an explicit intent (class property is specified)
-        Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-		// startActivity method starts an activity
-        startActivity(intent);
-	}
-
-	// Called when btnOpen is clicked
-    public void btnOpenBrowserClicked(View view) {
-		// This is an implicit intent
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"));
-		// startActivity method starts an activity
-		startActivity(i);
-    }*/
 }
