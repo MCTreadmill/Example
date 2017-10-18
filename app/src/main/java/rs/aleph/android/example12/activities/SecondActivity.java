@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
+import rs.aleph.android.example12.model.Food;
+import rs.aleph.android.example12.model.Ingredients;
 import rs.aleph.android.example12.provider.FoodProvider;
 import rs.aleph.android.example12.provider.CategoryProvider;
 import rs.aleph.android.example12.provider.IngredientsProvider;
@@ -46,45 +48,37 @@ public class SecondActivity extends Activity {
 
         // Finds "tvName" TextView and sets "text" property
         TextView tvName = (TextView) findViewById(R.id.tv_name);
-        tvName.setText(FoodProvider.getFoodById(position).getName());
+        String name = getString(R.string.food_name);
+        tvName.setText(name + FoodProvider.getFoodById(position).getName());
 
         TextView tvDescription = (TextView) findViewById(R.id.tv_description);
-        tvDescription.setText(FoodProvider.getFoodById(position).getDescription());
+        String description = getString(R.string.food_description);
+        tvDescription.setText(description + FoodProvider.getFoodById(position).getDescription());
 
         // Finds "spCategory" Spiner and sets "selection" property
         Spinner category = (Spinner) findViewById(R.id.sp_category);
         List<String> categories = CategoryProvider.getCategoryNames();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         category.setAdapter(adapter);
-        category.setSelection((int)FoodProvider.getFoodById(position).getCategory().getId());
+        category.setSelection((int) FoodProvider.getFoodById(position).getCategory().getId());
 
         TextView tvCalories = (TextView) findViewById(R.id.tv_calories);
-        tvCalories.setText(Float.toString(FoodProvider.getFoodById(position).getCalories()));
+        String calories = getString(R.string.food_calories);
+        tvCalories.setText(calories + Float.toString(FoodProvider.getFoodById(position).getCalories()));
 
         TextView tvPrice = (TextView) findViewById(R.id.tv_price);
-        tvPrice.setText(Float.toString(FoodProvider.getFoodById(position).getPrice()));
+        String price = getString(R.string.food_price);
+        tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()));
 
         // Loads fruits from array resource
         final List<String> ingredientNames = IngredientsProvider.getIngredientNames();
 
         // Creates an ArrayAdaptar from the array of String
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.list_item, ingredientNames);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.list_item2, ingredientNames);
         ListView listView = (ListView) findViewById(R.id.ingredients_list);
 
         // Assigns ArrayAdaptar to ListView
         listView.setAdapter(dataAdapter);
 
     }
-
-
-    /*public void btnStartThirdActivityClicked(View view) {
-        // This is an explicit intent (class property is specified)
-        Intent activity3 = new Intent(SecondActivity.this, ThirdActivity.class);
-        // startActivity method starts an activity
-        startActivity(activity3);
-    }
-    public void btnOpenCameraClicked(View view){
-        Intent camera = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
-        startActivity(camera);
-    }*/
 }

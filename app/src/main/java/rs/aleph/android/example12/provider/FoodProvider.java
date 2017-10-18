@@ -19,7 +19,7 @@ public class FoodProvider {
         Category vegan = new Category(2, "Vegan");
 
         List<Food> foods = new ArrayList<>();
-        foods.add(new Food(0, "cevapi.jpg", "Cevapi", "Sauseges served with fresh onions and white bread", meat, 650, 10));
+        foods.add(new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10));
         foods.add(new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12));
         foods.add(new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9));
         foods.add(new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8 ));
@@ -48,11 +48,11 @@ public class FoodProvider {
 
         switch (id) {
             case 0:
-                return new Food(0, "cevapi.jpg", "Cevapi", "Sauseges served with fresh onions and white bread", meat, 650, 10);
+                return new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10);
             case 1:
                 return new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12);
             case 2:
-                return new Food(2, "Macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9);
+                return new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9);
             case 3:
                 return new Food(3, "sourcreampotato.jpg", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8 );
             case 4:
