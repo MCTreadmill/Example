@@ -77,7 +77,7 @@ public class SecondActivity extends Activity {
         final List<Ingredients> ingredients = FoodProvider.getFoodById(position).getIngredients();
         final List<String> ingredientNames = new ArrayList<>();
         for (Ingredients ingredient1 : ingredients){
-            String output = String.format("%s", ingredient1);
+            String output = ingredient1.getName();
             ingredientNames.add(output);
         }
 
