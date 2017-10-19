@@ -21,7 +21,7 @@ public class Food {
         ingredients = new ArrayList<>();
     }
 
-    public Food(int id, String image, String name, String description, Category category, float calories, float price) {
+    public Food(int id, String image, String name, String description, Category category, float calories, float price, ArrayList<Ingredients> ingredients) {
         this.id = id;
         this.image = image;
         this.name = name;
@@ -29,6 +29,7 @@ public class Food {
         this.category = category;
         this.calories = calories;
         this.price = price;
+        this.ingredients = ingredients;
 
         ingredients = new ArrayList<>();
     }
@@ -89,9 +90,26 @@ public class Food {
         this.price = price;
     }
 
+    public List<Ingredients> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<Ingredients> ingredients) {
+        this.ingredients = ingredients;
+    }
+
     @Override
     public String toString() {
-        return name;
+        return "Food{" +
+                "id=" + id +
+                ", image='" + image + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", calories=" + calories + '\'' +
+                ", price=" + price + '\'' +
+                ", ingredients=" + ingredients + '\'' +
+                ", category=" + category +
+                '}';
     }
 
 

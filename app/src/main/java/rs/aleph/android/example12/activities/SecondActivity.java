@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import rs.aleph.android.example12.model.Food;
@@ -71,7 +72,12 @@ public class SecondActivity extends Activity {
         tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()));
 
         // Loads fruits from array resource
-        final List<String> ingredientNames = IngredientsProvider.getIngredientNames();
+        final List<Ingredients> ingredients = FoodProvider.getFoodById(position).getIngredients();
+        final List<String> ingredientNames = new ArrayList<>();
+        for (Ingredients ingredient1 : ingredients){
+            String output = String.format("%s", ingredient1);
+            ingredientNames.add(output);
+        }
 
         // Creates an ArrayAdaptar from the array of String
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.list_item2, ingredientNames);

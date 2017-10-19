@@ -17,12 +17,19 @@ public class IngredientsProvider {
         Category vegetarian = new Category(1, "Vegetarian");
         Category vegan = new Category(2, "Vegan");
 
-        Food cevapi = new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10);
-        Food pljeskavica = new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12);
-        Food macnCheese = new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9);
-        Food sourCreamPotatoes = new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8 );
-        Food veganCurry = new Food(4, "vegancurry.jpg", "Vegan Curry", "Asian noodles with mixed Veg and green curry", vegan, 590, 6);
-        Food friedVeg = new Food(5, "friedveg.jpg", "Fried Veggies", "Mixed fried Vegetables with Soya Sauce", vegan, 500, 5);
+        ArrayList<Ingredients> ingredients0 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients1 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients2 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients3 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients4 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients5 = new ArrayList<>();
+
+        Food cevapi = new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10, ingredients0);
+        Food pljeskavica = new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12, ingredients1);
+        Food macnCheese = new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9, ingredients2);
+        Food sourCreamPotatoes = new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8, ingredients3);
+        Food veganCurry = new Food(4, "vegancurry.jpg", "Vegan Curry", "Asian noodles with mixed Veg and green curry", vegan, 590, 6, ingredients4);
+        Food friedVeg = new Food(5, "friedveg.jpg", "Fried Veggies", "Mixed fried Vegetables with Soya Sauce", vegan, 500, 5, ingredients5);
 
 
         List<Ingredients> ingredients = new ArrayList<>();
@@ -85,12 +92,19 @@ public class IngredientsProvider {
         Category vegetarian = new Category(1, "Vegetarian");
         Category vegan = new Category(2, "Vegan");
 
-        Food cevapi = new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10);
-        Food pljeskavica = new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12);
-        Food macnCheese = new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9);
-        Food sourCreamPotatoes = new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8 );
-        Food veganCurry = new Food(4, "vegancurry.jpg", "Vegan Curry", "Asian noodles with mixed Veg and green curry", vegan, 590, 6);
-        Food friedVeg = new Food(5, "friedveg.jpg", "Fried Veggies", "Mixed fried Vegetables with Soya Sauce", vegan, 500, 5);
+        ArrayList<Ingredients> ingredients0 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients1 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients2 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients3 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients4 = new ArrayList<>();
+        ArrayList<Ingredients> ingredients5 = new ArrayList<>();
+
+        Food cevapi = new Food(0, "cevapi.jpg", "Cevapi", "Sausages served with fresh onions and white bread", meat, 650, 10, ingredients0);
+        Food pljeskavica = new Food(1, "pljeskavica.jpg", "Pljeskavica", "Beefburger served in Pitabread with veggies", meat, 750, 12, ingredients1);
+        Food macnCheese = new Food(2, "macncheese.jpg", "Mac'N'Cheese", "Italian Maccharoni cooked with Cheddarcheese", vegetarian, 600, 9, ingredients2);
+        Food sourCreamPotatoes = new Food(3, "sourcreampotato.png", "Sour Cream Potatoes", "Baked potatoes with sour cream", vegetarian, 550, 8, ingredients3);
+        Food veganCurry = new Food(4, "vegancurry.jpg", "Vegan Curry", "Asian noodles with mixed Veg and green curry", vegan, 590, 6, ingredients4);
+        Food friedVeg = new Food(5, "friedveg.jpg", "Fried Veggies", "Mixed fried Vegetables with Soya Sauce", vegan, 500, 5, ingredients5);
 
         switch (id) {
             case 0:

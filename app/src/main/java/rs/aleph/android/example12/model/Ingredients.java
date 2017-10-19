@@ -43,4 +43,5 @@ public class Ingredients {
     public void setFood(Food food) {
         this.food = food;
     }
+
 }
