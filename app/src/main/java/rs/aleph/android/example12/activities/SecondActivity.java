@@ -65,11 +65,13 @@ public class SecondActivity extends Activity {
 
         TextView tvCalories = (TextView) findViewById(R.id.tv_calories);
         String calories = getString(R.string.food_calories);
-        tvCalories.setText(calories + Float.toString(FoodProvider.getFoodById(position).getCalories()));
+        String cal = getString(R.string.food_cal);
+        tvCalories.setText(calories + Float.toString(FoodProvider.getFoodById(position).getCalories()) + cal);
 
         TextView tvPrice = (TextView) findViewById(R.id.tv_price);
         String price = getString(R.string.food_price);
-        tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()));
+        String eur = getString(R.string.food_eur);
+        tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()) + eur);
 
         // Loads fruits from array resource
         final List<Ingredients> ingredients = FoodProvider.getFoodById(position).getIngredients();

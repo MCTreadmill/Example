@@ -5,4 +5,6 @@
     <string name="food_description">Description:</string>
     <string name="food_name">Name:</string>
     <string name="food_price">Price:</string>
+    <string name="food_eur">EUR</string>
+    <string name="food_cal">Kcal</string>
 </resources>
