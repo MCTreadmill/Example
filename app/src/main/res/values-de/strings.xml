@@ -7,4 +7,6 @@
     <string name="food_price">"Preis: "</string>
     <string name="food_eur">EUR</string>
     <string name="food_cal">Kcal</string>
+
+    <string name="tv_title">Menü</string>
 </resources>

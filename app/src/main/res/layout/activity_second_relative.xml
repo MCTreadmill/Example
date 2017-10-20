@@ -7,17 +7,17 @@
 
     <ImageView
         android:id="@+id/iv_image"
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/iv_image"/>
+        android:layout_below="@id/iv_image"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tv_description"
@@ -25,22 +25,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_name"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/iv_image"/>
+        android:textSize="16sp"/>
 
     <Spinner
         android:id="@+id/sp_category"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/iv_image"/>
+        android:layout_below="@id/tv_description"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tv_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/tv_description"
-        android:layout_toRightOf="@id/iv_image"/>
+        android:layout_below="@id/sp_category"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/tv_price"
@@ -48,12 +49,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/tv_calories"
-        android:layout_toRightOf="@id/iv_image"/>
+        android:textSize="16sp"/>
 
     <ListView
         android:id="@+id/ingredients_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sp_category"/>
+        android:layout_below="@id/tv_price"/>
 
 </RelativeLayout>
