@@ -2,7 +2,6 @@ package rs.aleph.android.example12.fragments;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +9,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import rs.aleph.android.example12.R;
-import rs.aleph.android.example12.activities.FirstActivity;
-import rs.aleph.android.example12.activities.SecondActivity;
 import rs.aleph.android.example12.provider.FoodProvider;
 
 /**

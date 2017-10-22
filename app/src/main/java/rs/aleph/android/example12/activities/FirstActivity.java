@@ -31,7 +31,7 @@ public class FirstActivity extends Activity implements ListFragment.OnItemSelect
 		// setContentView method draws UI
 		setContentView(R.layout.activity_main);
 
-		// If the activity is started for the first time create master fragment
+		// If the activity is started for the first time create list fragment
 		if (savedInstanceState == null) {
 			// FragmentTransaction is a set of changes (e.g. adding, removing and replacing fragments) that you want to perform at the same time.
 			FragmentTransaction ft = getFragmentManager().beginTransaction();
@@ -55,31 +55,10 @@ public class FirstActivity extends Activity implements ListFragment.OnItemSelect
 				ft.commit();
 			}
 		}
-
-		// Loads fruits from array resource
-		final List<String> foodNames = FoodProvider.getFoodNames();
-
-		// Creates an ArrayAdaptar from the array of String
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.list_item, foodNames);
-		ListView listView = (ListView) findViewById(R.id.food_list);
-
-		// Assigns ArrayAdaptar to ListView
-		listView.setAdapter(dataAdapter);
-
-		// Starts the SecondActivity and sends it the selected URL as an extra data
-		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-				intent.putExtra("position", position);
-				startActivity(intent);
-			}
-		});
 	}
 	@Override
 	public void onItemSelected(int position) {
 
-		// Shows a toast message (a pop-up message)
-		Toast.makeText(getBaseContext(), "FirstActivity.onItemSelected()", Toast.LENGTH_SHORT).show();
 
 		if (landscape) {
 			// If the device is in the landscape mode updates detail fragment's content.
