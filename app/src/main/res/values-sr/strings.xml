@@ -10,4 +10,7 @@
 
     <string name="tv_title">Meni</string>
     <string name="cd_image">Slika od izbranog jela</string>
+    <string name="tb_create">Dodati</string>
+    <string name="tb_delete">Izbrisati</string>
+    <string name="tb_update">Izmenuti</string>
 </resources>

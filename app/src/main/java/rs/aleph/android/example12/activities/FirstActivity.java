@@ -1,24 +1,20 @@
 package rs.aleph.android.example12.activities;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import java.util.List;
 
 import rs.aleph.android.example12.R;
 import rs.aleph.android.example12.fragments.DetailFragment;
 import rs.aleph.android.example12.fragments.ListFragment;
-import rs.aleph.android.example12.provider.FoodProvider;
 
 // Each activity extends Activity class
-public class FirstActivity extends Activity implements ListFragment.OnItemSelectedListener{
+public class FirstActivity extends AppCompatActivity implements ListFragment.OnItemSelectedListener{
 
 	boolean landscape = false;
 
@@ -30,6 +26,15 @@ public class FirstActivity extends Activity implements ListFragment.OnItemSelect
 		super.onCreate(savedInstanceState);
 		// setContentView method draws UI
 		setContentView(R.layout.activity_main);
+
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
+		final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+		if (actionBar != null) {
+			actionBar.show();
+		}
 
 		// If the activity is started for the first time create list fragment
 		if (savedInstanceState == null) {
@@ -74,5 +79,32 @@ public class FirstActivity extends Activity implements ListFragment.OnItemSelect
 			ft.addToBackStack(null);
 			ft.commit();
 		}
+	}
+
+	// Method(s) that manage Toolbar.
+
+	// onCreateOptionsMenu method initialize the contents of the Activity's Toolbar.
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	// onOptionsItemSelected method is called whenever an item in the Toolbar is selected.
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.action_create:
+				Snackbar.make(findViewById(R.id.list_view), R.string.tb_create, Snackbar.LENGTH_SHORT).show();
+				break;
+			case R.id.action_update:
+				Snackbar.make(findViewById(R.id.list_view), R.string.tb_update, Snackbar.LENGTH_SHORT).show();
+				break;
+			case R.id.action_delete:
+				Snackbar.make(findViewById(R.id.list_view), R.string.tb_delete, Snackbar.LENGTH_SHORT).show();
+				break;
+		}
+
+		return super.onOptionsItemSelected(item);
 	}
 }

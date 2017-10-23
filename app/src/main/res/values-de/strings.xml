@@ -10,4 +10,7 @@
 
     <string name="tv_title">Menü</string>
     <string name="cd_image">Foto des ausgewählten Essens</string>
+    <string name="tb_create">Hinzufuegen</string>
+    <string name="tb_delete">Loeschen</string>
+    <string name="tb_update">Aendern</string>
 </resources>

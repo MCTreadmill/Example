@@ -10,4 +10,7 @@
 
     <string name="tv_title">Menu</string>
     <string name="cd_image">Image of the chosen Food</string>
+    <string name="tb_create">Create</string>
+    <string name="tb_delete">Delete</string>
+    <string name="tb_update">Update</string>
 </resources>
