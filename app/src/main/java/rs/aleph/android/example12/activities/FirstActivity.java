@@ -18,6 +18,7 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
 
 	boolean landscape = false;
 
+
 	// onCreate method is a lifecycle method called when he activity is starting
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 	{
@@ -63,7 +64,6 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
 	}
 	@Override
 	public void onItemSelected(int position) {
-
 
 		if (landscape) {
 			// If the device is in the landscape mode updates detail fragment's content.

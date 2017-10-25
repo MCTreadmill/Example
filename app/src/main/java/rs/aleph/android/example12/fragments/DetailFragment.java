@@ -105,10 +105,6 @@ public class DetailFragment extends Fragment {
 
         super.onCreateView(inflater, container, savedInstanceState);
 
-        if (container == null) {
-            return null;
-        }
-
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
 
         return view;
