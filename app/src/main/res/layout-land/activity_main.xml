@@ -14,18 +14,25 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <LinearLayout
+    <!-- DrawerLayout is a top-level container for window content that allows for interactive "drawer" views to be pulled out from one or both vertical edges of the window. -->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:orientation="vertical">
+
+        <!-- Main layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
         <FrameLayout
             android:id="@+id/list_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2">
-
         </FrameLayout>
 
 
@@ -34,9 +41,28 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3">
-
         </FrameLayout>
 
-    </LinearLayout>
+        </LinearLayout>
+
+        <!-- NavigationDrawer layout -->
+        <RelativeLayout
+            android:id="@+id/drawerPane"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <!-- List of NavigationDrawer items (pages) -->
+            <ListView
+                android:id="@+id/navList"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:background="#ffffffff" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
 
 </LinearLayout>
