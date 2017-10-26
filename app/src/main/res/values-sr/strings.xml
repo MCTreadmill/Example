@@ -13,4 +13,11 @@
     <string name="tb_create">Dodati</string>
     <string name="tb_delete">Izbrisati</string>
     <string name="tb_update">Izmenuti</string>
+    <string name="dialog_about_message">Autor Luka Stojic je dizajnirao i razvijo ovu aplikaciju</string>
+    <string name="dialog_about_title">O aplikaciji Food App</string>
+    <string name="drawer_settings">Podesavanja</string>
+    <string name="notification_text">Objekat je dodat u korpu i spreman za izporudzbinu</string>
+    <string name="notification_title">Objekat dodat</string>
+    <string name="restaurant_address">Dodati adresu restorana</string>
+    <string name="restaurant_name">Dodati ime restorana</string>
 </resources>

@@ -13,4 +13,11 @@
     <string name="tb_create">Create</string>
     <string name="tb_delete">Delete</string>
     <string name="tb_update">Update</string>
+    <string name="dialog_about_message">This App was developed and designed by Luka Stojic</string>
+    <string name="dialog_about_title">About Food App</string>
+    <string name="drawer_settings">Settings</string>
+    <string name="notification_text">Item added to your Basket and ready to ship</string>
+    <string name="notification_title">Item added</string>
+    <string name="restaurant_address">Enter Restaurant\'s Address</string>
+    <string name="restaurant_name">Enter Restaurant\'s Name</string>
 </resources>

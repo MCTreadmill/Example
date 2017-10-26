@@ -1,8 +1,14 @@
 package rs.aleph.android.example12.fragments;
 
 import android.app.Fragment;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +37,8 @@ public class DetailFragment extends Fragment {
 
     private int position = 0;
 
+    private static int NOTIFICATION_ID = 1;
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
 
@@ -53,12 +61,10 @@ public class DetailFragment extends Fragment {
 
         // Finds "tvName" TextView and sets "text" property
         TextView tvName = (TextView) getView().findViewById(R.id.tv_name);
-        String name = getString(R.string.food_name);
-        tvName.setText(name + FoodProvider.getFoodById(position).getName());
+        tvName.setText(FoodProvider.getFoodById(position).getName());
 
         TextView tvDescription = (TextView) getView().findViewById(R.id.tv_description);
-        String description = getString(R.string.food_description);
-        tvDescription.setText(description + FoodProvider.getFoodById(position).getDescription());
+        tvDescription.setText(FoodProvider.getFoodById(position).getDescription());
 
         // Finds "spCategory" Spiner and sets "selection" property
         Spinner category = (Spinner) getView().findViewById(R.id.sp_category);
@@ -68,14 +74,12 @@ public class DetailFragment extends Fragment {
         category.setSelection((int) FoodProvider.getFoodById(position).getCategory().getId());
 
         TextView tvCalories = (TextView) getView().findViewById(R.id.tv_calories);
-        String calories = getString(R.string.food_calories);
         String cal = getString(R.string.food_cal);
-        tvCalories.setText(calories + Float.toString(FoodProvider.getFoodById(position).getCalories()) + cal);
+        tvCalories.setText(Float.toString(FoodProvider.getFoodById(position).getCalories()) + cal);
 
         TextView tvPrice = (TextView) getView().findViewById(R.id.tv_price);
-        String price = getString(R.string.food_price);
         String eur = getString(R.string.food_eur);
-        tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()) + eur);
+        tvPrice.setText(Float.toString(FoodProvider.getFoodById(position).getPrice()) + eur);
 
         // Loads fruits from array resource
         final List<Ingredients> ingredients = FoodProvider.getFoodById(position).getIngredients();
@@ -91,6 +95,15 @@ public class DetailFragment extends Fragment {
 
         // Assigns ArrayAdaptar to ListView
         listView.setAdapter(dataAdapter);
+
+        // Finds "btnBuy" Button and sets "onClickListener" listener
+        FloatingActionButton btnBuy = (FloatingActionButton) getView().findViewById(R.id.btn_buy);
+        btnBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification();
+            }
+        });
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -139,12 +152,10 @@ public class DetailFragment extends Fragment {
 
         // Finds "tvName" TextView and sets "text" property
         TextView tvName = (TextView) getView().findViewById(R.id.tv_name);
-        String name = getString(R.string.food_name);
-        tvName.setText(name + FoodProvider.getFoodById(position).getName());
+        tvName.setText(FoodProvider.getFoodById(position).getName());
 
         TextView tvDescription = (TextView) getView().findViewById(R.id.tv_description);
-        String description = getString(R.string.food_description);
-        tvDescription.setText(description + FoodProvider.getFoodById(position).getDescription());
+        tvDescription.setText(FoodProvider.getFoodById(position).getDescription());
 
         // Finds "spCategory" Spiner and sets "selection" property
         Spinner category = (Spinner) getView().findViewById(R.id.sp_category);
@@ -154,14 +165,12 @@ public class DetailFragment extends Fragment {
         category.setSelection((int) FoodProvider.getFoodById(position).getCategory().getId());
 
         TextView tvCalories = (TextView) getView().findViewById(R.id.tv_calories);
-        String calories = getString(R.string.food_calories);
         String cal = getString(R.string.food_cal);
-        tvCalories.setText(calories + Float.toString(FoodProvider.getFoodById(position).getCalories()) + cal);
+        tvCalories.setText(Float.toString(FoodProvider.getFoodById(position).getCalories()) + cal);
 
         TextView tvPrice = (TextView) getView().findViewById(R.id.tv_price);
-        String price = getString(R.string.food_price);
         String eur = getString(R.string.food_eur);
-        tvPrice.setText(price + Float.toString(FoodProvider.getFoodById(position).getPrice()) + eur);
+        tvPrice.setText(Float.toString(FoodProvider.getFoodById(position).getPrice()) + eur);
 
         // Loads fruits from array resource
         final List<Ingredients> ingredients = FoodProvider.getFoodById(position).getIngredients();
@@ -177,5 +186,28 @@ public class DetailFragment extends Fragment {
 
         // Assigns ArrayAdaptar to ListView
         listView.setAdapter(dataAdapter);
+
+        // Finds "btnBuy" Button and sets "onClickListener" listener
+        FloatingActionButton btnBuy = (FloatingActionButton) getView().findViewById(R.id.btn_buy);
+        btnBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNotification();
+            }
+        });
+    }
+
+    private void showNotification() {
+        // Creates notification with the notification builder
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity());
+        Bitmap bitmap = BitmapFactory.decodeResource(getActivity().getResources(), R.drawable.ic_stat_buy);
+        builder.setSmallIcon(R.drawable.ic_stat_buy);
+        builder.setContentTitle(getActivity().getString(R.string.notification_title));
+        builder.setContentText(getActivity().getString(R.string.notification_text));
+        builder.setLargeIcon(bitmap);
+
+        // Shows notification with the notification manager (notification ID is used to update the notification later on)
+        NotificationManager manager = (NotificationManager)getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(NOTIFICATION_ID, builder.build());
     }
 }

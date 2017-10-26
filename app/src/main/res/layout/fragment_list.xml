@@ -9,8 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:textSize="32sp"
-        android:text="@string/tv_title"/>
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="@string/tv_title"
+        android:textColor="@color/primary_text"/>
 
     <ListView
         android:id="@+id/food_list"

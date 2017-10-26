@@ -13,4 +13,11 @@
     <string name="tb_create">Hinzufügen</string>
     <string name="tb_delete">Löschen</string>
     <string name="tb_update">Ändern</string>
+    <string name="dialog_about_message">Diese App wurde von Luka Stojic designed und entwickelt</string>
+    <string name="dialog_about_title">Über die Food App</string>
+    <string name="drawer_settings">Einstellungen</string>
+    <string name="notification_text">Objekt wurde dem Warenkorb hinzugefügt und ist bereit für den Versand</string>
+    <string name="notification_title">Objekt hinzugefügt</string>
+    <string name="restaurant_address">Addresse des Restaurants eingeben</string>
+    <string name="restaurant_name">Name des Restaurants eingeben</string>
 </resources>

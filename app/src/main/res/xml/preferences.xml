@@ -13,16 +13,19 @@
 
     </PreferenceCategory>
     <EditTextPreference
-        android:defaultValue="@string/restaurant_name"
+        android:title="@string/restaurant_name"
+        android:textColor="@color/secondary_text"
         android:key="@string/edit_restaurant_name"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="@string/restaurant_name" />
+        android:inputType="text"/>
+
     <EditTextPreference
-        android:defaultValue="@string/restaurant_address"
+        android:title="@string/restaurant_address"
+        android:textColor="@color/secondary_text"
         android:key="@string/edit_restaurant_address"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="@string/restaurant_address" />
+        android:inputType="text"/>
 
 </PreferenceScreen>
