@@ -209,8 +209,6 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
 		getSupportActionBar().setTitle(title);
 	}
 
-
-
 	// Method(s) that manage NavigationDrawer.
 
 	// onPostCreate method is called often onRestoreInstanceState to synchronize toggle state
@@ -230,5 +228,4 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
 		// Pass any configuration change to the drawer toggle
 		drawerToggle.onConfigurationChanged(configuration);
 	}
-
 }
