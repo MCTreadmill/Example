@@ -33,7 +33,12 @@ public class FirstActivity extends AppCompatActivity implements ListFragment.OnI
 	private class DrawerItemClickListener implements ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			if (position == 0) {
+			if (position == 0 && findViewById(R.id.detail_view) == null) {
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				ListFragment listFragment = new ListFragment();
+				ft.replace(R.id.list_view, listFragment, "List_Fragment_1");
+				ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+				ft.commit();
 				// FirstActivity is already shown
 			} else if (position == 1) {
 				Intent settings = new Intent(FirstActivity.this,SettingsActivity.class);
